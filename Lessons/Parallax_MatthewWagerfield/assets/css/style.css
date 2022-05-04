@@ -1,0 +1,252 @@
+*,*::before,*::after{
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+html,body{
+    height: 100%;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    background-color: #000; 
+}
+.wrapper {
+    overflow: hidden;
+    opacity: 0;
+    transition: all 1.0s ease 0s;
+}
+.wrapper.active{
+    opacity: 1;
+}
+.wrapper.active .parallax__wave{
+    opacity: 1;
+    transition: all 1.0s ease 1.0s;
+}
+.wrapper.active .parallax__rope{
+    opacity: 1;
+    transition: all 1.0s ease 1.8s;
+}
+.wrapper.active .parallax__lighthouse{
+    transition: all 1.0s ease 2.5s;
+    bottom: 130px;
+}
+.page {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 360px;
+}
+.parallax {
+    flex: 1 0 100%;
+    position: relative;
+    overflow: hidden;
+}
+.parallax::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0,0,0,0), rgba(0, 0, 0, 0.6));
+}
+.parallax__list {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+.parallax__list li{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+}
+.parallax__bg {
+    position: absolute;
+    width: 110%;
+    height: 110%;
+    top: -5%;
+    left: -5%;
+    background: url(../img/background.jpg) 50% 100%  / cover no-repeat;
+}
+.parallax__rope {
+    position: absolute;
+    width: 120%;
+    left: -10%;
+    opacity: 0;
+}
+.parallax__rope img{
+    width: 100%;
+}
+.parallax__rope_1 {
+    top: 5%;
+    transform: scale(1);
+}
+.parallax__rope_2 {
+    top: 1.66667%%;
+    transform: scale(1.05556);
+}
+.parallax__rope_3 {
+    top: -11.666667%;
+    transform: scale(1.13889);
+}
+.parallax__rope_1 .parallax__element{
+    transform: scale(0.6);
+}
+.parallax__rope_2 .parallax__element{
+    transform: scale(0.75556);
+}
+.parallax__rope_3 .parallax__element{
+    transform: scale(0.98889);
+}
+.parallax__element {
+    position: absolute;
+}
+.parallax__element span{
+    display: inline-block;
+    transform-origin: 50% 0;
+    width: 280px;
+    height: 280px;
+    margin: 0 0 0 -140px;
+    animation: swing 2s infinite alternate cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+.parallax__element_1 {
+    top: 28%;
+    left: 20%;
+}
+.parallax__element_1 span{
+    background: url('../img/clouds/board-cloud-2.png') 0 0 / 100% no-repeat;
+}
+.parallax__element_2 {
+    top: 46%;
+    left: 40%;
+}
+.parallax__element_2 span{
+    background: url('../img/clouds/board-cloud-1.png') 0 0 / 100% no-repeat;
+}
+.parallax__element_3 {
+    top: 24%;
+    left: 80%;
+}
+.parallax__element_3 span{
+    background: url('../img/clouds/board-birds.png') 0 0 / 100% no-repeat;
+}
+.parallax__element_4 {
+    left: 10%;
+    top: 17%;
+}
+.parallax__element_4 span{
+    background: url('../img/clouds/board-cloud-1.png') 0 0 / 100% no-repeat;
+}
+.parallax__element_5 {
+    left: 50%;
+    top: 56%;
+}
+.parallax__element_5 span{
+    background: url('../img/clouds/board-cloud-4.png') 0 0 / 100% no-repeat;
+}
+.parallax__element_6 {
+    left: 30%;
+    top: 57%;
+}
+.parallax__element_6 span{
+    background: url('../img/clouds/board-birds.png') 0 0 / 100% no-repeat;
+}
+.parallax__element_7 {
+    left: 60%;
+    top: 65%;
+}
+.parallax__element_7 span{
+    background: url('../img/clouds/board-cloud-2.png') 0 0 / 100% no-repeat;
+}
+.parallax__element_8 {
+    left: 80%;
+    top: 45%;
+}
+.parallax__element_8 span{
+    background: url('../img/clouds/board-cloud-3.png') 0 0 / 100% no-repeat;
+}
+.parallax__wave {
+    position: absolute;
+    background: url('../img/waves/wave-plain.png') 0 0 / auto 101% repeat-x;
+    left: -100%;
+    width: 300%;
+    opacity: 0;
+}
+.parallax__wave_1 {
+    bottom: 180px;
+    height: 86px;
+    animation: wave 7.11111s 0.1s infinite linear;
+    background: url('../img/waves/wave-paint.png') 0 0 / auto 101% repeat-x;
+}
+.parallax__wave_2 {
+    bottom: 144px;
+    height: 115px;
+    animation: wave 6.66667s 0.1s infinite linear;
+}
+.parallax__wave_3 {
+    bottom: 108px;
+    height: 144px;
+    animation: wave 6.22222s 0.1s infinite linear;
+    background: url('../img/waves/wave-paint.png') 0 0 / auto 101% repeat-x;
+}
+.parallax__wave_4 {
+    bottom: 72px;
+    height: 173px;
+    animation: wave 5.77778s 0.1s infinite linear;
+}
+.parallax__wave_5 {
+    bottom: -1px;
+    height: 230px;
+    animation: wave 4.88888s 0.1s infinite linear;
+}
+.parallax__wave_6 {
+    bottom: -72px;
+    height: 288px;
+    animation: wave 4.5s 0.1s infinite linear;
+    background: url('../img/waves/wave-paint.png') 0 0 / auto 101% repeat-x;
+}
+.parallax__lighthouse {
+    background: url('../img/lighthouse.png') 0 0 no-repeat;
+    width: 320px;
+    height: 560px;
+    position: absolute;
+    right: 12%;
+    bottom: -100%;
+    animation: lighthouse 4s 0.1s infinite alternate cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+.content {
+}
+
+@keyframes swing{
+    0%{
+        transform: rotateZ(10deg);
+    }
+    100%{
+        transform: rotateZ(-10deg);
+    }
+}
+
+@keyframes wave{
+    0%{
+        transform: rotateZ(0deg) translate3d(0,10%,0) rotateZ(0deg);
+    }
+    100%{
+        transform: rotateZ(360deg) translate3d(0,10%,0) rotateZ(-360deg);
+    }
+}
+
+@keyframes lighthouse{
+    0%{
+        transform: translate3d(15%,0,0) rotateZ(10deg);
+    }
+    100%{
+        transform: translate3d(-15%,0,0) rotateZ(-10deg);
+    }
+}

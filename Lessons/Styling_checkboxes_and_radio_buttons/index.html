@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styling checkboxes and radio buttons</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <form action="#" class="block_form">
+            <div class="block_form__title">Стили элементов форм</div>
+            <div class="block_form__input">
+                <div class="checkbox">
+                    Выключатель №1
+                    <input type="checkbox" name="namecheckbox_1">
+                </div>
+            </div>
+            <div class="block_form__input">
+                <div class="checkbox">
+                    Выключатель №2
+                    <input type="checkbox" checked name="namecheckbox_2">
+                </div>
+            </div>
+            <div class="block_form__input">
+                <div class="radiobuttons">
+                    <div class="radiobuttons__item">
+                        Вариант №1
+                        <input type="radio" checked value="1" name="nameradio">
+                    </div>
+                    <div class="radiobuttons__item">
+                        Вариант №2
+                        <input type="radio" value="2" name="nameradio">
+                    </div>
+                    <div class="radiobuttons__item">
+                        Вариант №3
+                        <input type="radio" value="3" name="nameradio">
+                    </div>
+                </div>
+            </div>
+            <button class="button" type="submit"><span>Отправить форму</span></button>
+        </form>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
