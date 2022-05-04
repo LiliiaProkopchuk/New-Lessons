@@ -1,16 +1,84 @@
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
   margin: 0;
   padding: 0;
   border: 0;
@@ -20,8 +88,17 @@ time, mark, audio, video {
   font-family: "Oleo Script", cursive;
 }
 
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
   display: block;
 }
 
@@ -33,16 +110,20 @@ body {
   line-height: 1;
 }
 
-ol, ul {
+ol,
+ul {
   list-style: none;
 }
 
-blockquote, q {
+blockquote,
+q {
   quotes: none;
 }
 
-blockquote:before, blockquote:after,
-q:before, q:after {
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
   content: "";
   content: none;
 }
@@ -63,23 +144,42 @@ a {
   font-weight: 400;
   font-style: normal;
 }
+
 body {
-  background-color: rgb(172, 170, 170);
+  background-color: rgb(218, 217, 217);
 }
+
 body .container {
   max-width: 1000px;
   margin: 0 auto;
   padding: 50px 0 50px;
 }
+
+body .container .mainTile {
+  font-size: 62px;
+  font-weight: 700;
+  padding: 0 30px;
+  text-align: center;
+  margin-bottom: 20px;
+  color: rgb(172, 85, 23);
+  text-shadow: -6px 4px rgb(37, 21, 15);
+}
+
 body .container .lesson__box {
   background-color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   margin-bottom: 30px;
 }
+
+.no-webp body .container .box__img {
+  background-image: url(../img/bgForImg.jpg); }
+
 body .container .box__img {
-  background-image: url(../img/bgForImg.jpg);
   background-repeat: no-repeat;
 }
+
 body .container .box__img .img__link {
   display: block;
   position: relative;
@@ -89,24 +189,31 @@ body .container .box__img .img__link {
   width: 600px;
   height: 400px;
 }
+
 body .container .box__img .img__link .img__text {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   text-shadow: 2px 3px rgb(151, 67, 33);
 }
+
 body .container .box__description {
   padding: 30px 30px 0 30px;
 }
+
 body .container .box__description .description__title {
   color: #351a20;
   font-size: 28px;
   font-weight: 700;
 }
+
 body .container .box__description .description__list {
   margin-top: 30px;
 }
+
 body .container .box__description .description__list .description__item {
   padding-left: 30px;
   position: relative;
@@ -114,18 +221,87 @@ body .container .box__description .description__list .description__item {
   font-size: 18px;
   line-height: 150%;
 }
+
+.no-webp body .container .box__description .description__list .description__item::before {
+  background-image: url(../img/check_mark.png); }
+
 body .container .box__description .description__list .description__item::before {
   content: "";
   position: absolute;
   width: 20px;
   height: 20px;
-  background-image: url(../img/check_mark.png);
   top: 50%;
   left: 0;
-  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
+
 body .container .box__description .description__textOnly {
   margin-top: 30px;
   font-size: 18px;
   line-height: 150%;
 }
+
+@media (max-width: 1100px) {
+  body .container {
+    max-width: 900px;
+  }
+
+  body .container .box__img .img__link {
+    width: 500px;
+    height: 300px;
+  }
+}
+
+@media (max-width: 950px) {
+  body .container {
+    max-width: 600px;
+  }
+
+  body .container .lesson__box {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  body .container .box__img .img__link {
+    width: 600px;
+  }
+
+  body .container .box__description .description__textOnly {
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 650px) {
+  body .container {
+    max-width: 400px;
+  }
+
+  body .container .box__img .img__link {
+    width: 400px;
+    height: 250px;
+  }
+}
+
+@media (max-width: 450px) {
+  body .container {
+    max-width: 300px;
+  }
+
+  body .container .mainTile {
+    font-size: 42px;
+    text-shadow: -2px 2px rgb(37, 21, 15);
+  }
+
+  body .container .box__img .img__link {
+    width: 300px;
+    font-size: 42px;
+  }
+}
+
+.webp body .container .box__img { background-image: url(../img/bgForImg.webp); }
+
+.webp body .container .box__description .description__list .description__item::before { background-image: url(../img/check_mark.webp); }
