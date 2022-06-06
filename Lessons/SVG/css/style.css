@@ -1,0 +1,53 @@
+body{
+    padding: 50px;
+}
+.box{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+}
+.svg{
+    width: 250px;
+    height: 200px;
+    border: 1px solid #582369;
+    margin-bottom: 50px;
+}
+.text{
+    font-size: 20px;
+    fill: aqua;
+}
+.svg-text{
+    overflow: visible;
+}
+.rect{
+    stroke: darkolivegreen;
+    stroke-width: 5;
+    fill: none;
+    stroke-dasharray: 500; 
+    stroke-dashoffset: 500;
+    transition: all .5s ease-in;
+}
+.svg-rect:hover .rect,
+.ball:hover .ball-path,
+.svg-circle:hover .circle{
+    stroke-dashoffset: 0;
+}
+.circle{
+    transition: all .5s ease-in;
+    stroke-dasharray: 251; 
+    stroke-dashoffset: 251;
+}
+.ball-path{
+    fill: none;
+    stroke: rgba(0, 255, 255, 0.589);
+    stroke-width: 10px;
+    transition: all .5s ease-in;
+    stroke-dasharray: 600; 
+    stroke-dashoffset: 600;
+}
+.image{
+    clip-path: url(#ball);
+}
+.polyline{
+    stroke-linejoin: round;
+}
